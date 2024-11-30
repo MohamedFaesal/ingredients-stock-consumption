@@ -43,3 +43,32 @@ Also, when any of the ingredients stock level reaches 50%, the system should sen
     ]
    }
 ```
+# How to run
+
+* Rename .env.example to .env
+* Install Dependencies
+```
+composer install
+```
+* Create a database - named as `ingredients-stock-consumption`
+* Run migration
+```
+php artisan migrate
+```
+* Seed database
+```
+php artisan db:seed
+```
+* Run the project:
+```
+php artisan serve
+```
+* You can call the order API and the product list API from here:
+```
+POST localhost:8000/api/order
+GET localhost:8000/api/products
+```
+* You can run unit testing:
+```
+php artisan test
+```
